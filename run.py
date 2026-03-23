@@ -7,7 +7,7 @@ from ultralytics.utils import YAML
 from ultralytics import YOLO
 from ultralytics.utils.plotting import plot_predict_samples
 from citycolor.utils import get_main_name, pano2cube, GetFileFromThisRootDir, load_config, \
-    find_category_index, find_mask, hue_analytic, saturation_analytic
+    find_category_index, find_mask, hue_analytic, saturation_analytic, get_expect
 from citycolor.plotting import plot_hue, plot_saturation, plot_hue_and_sat
 
 project_dir = Path(__file__).resolve().parent
@@ -70,7 +70,7 @@ def main():
                     for hi in range(len(hue_hist)):
                         saturation_hist = saturation_analytic(cv2.imread(cube_image_file), mask,hi, config)
                         saturation_hist[0] *= 0.8
-                        hue_sats.append(config.saturations[saturation_hist.argmax()])
+                        hue_sats.append(get_expect(saturation_hist))
                         plot_saturation(saturation_hist,
                                         config.colors[hi],
                                         config.saturations,

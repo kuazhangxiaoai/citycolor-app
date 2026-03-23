@@ -133,5 +133,11 @@ def pano2cube(image: np.ndarray, imgsz=512):
         cube[f] = fimg
     return cube
 
+def get_expect(hist:np.ndarray):
+    xs = np.arange(hist.shape[0])
+    ys = hist.astype(np.float32) / hist.sum()
+    expect = (xs * ys).sum() / hist.shape[0]
+    return expect
+
 
 
