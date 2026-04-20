@@ -7,8 +7,9 @@ from ultralytics.utils import YAML
 from ultralytics import YOLO
 from ultralytics.utils.plotting import plot_predict_samples
 from citycolor.utils import get_main_name, pano2cube, GetFileFromThisRootDir, load_config, \
-    find_category_index, find_mask, hue_analytic, saturation_analytic, get_expect
-from citycolor.plotting import plot_hue, plot_saturation, plot_hue_and_sat
+    find_category_index, find_mask, hue_analytic, saturation_analytic, get_expect, get_color_cards, \
+    get_vertical_color_card
+from citycolor.plotting import plot_hue, plot_saturation, plot_hue_and_sat, plot_color_band, plot_strip_band
 
 project_dir = Path(__file__).resolve().parent
 config = Config(project_dir)
@@ -64,6 +65,14 @@ def main():
                     mask = find_mask(colormap, color)
                     mask_gray = (mask.astype(np.float32) * 255).astype(np.uint8)
                     hue_hist = hue_analytic(cv2.imread(cube_image_file), mask, config)
+                    color_stats = get_color_cards(cv2.imread(cube_image_file), mask, config.color_system_file, 3, topk=5)
+                    plot_color_band(stats=color_stats, save_path=os.path.join(config.plot_dir, f"{basename}_{k}_colorband.png"))
+                    color_strip_stats, strip_infos = get_vertical_color_card(cv2.imread(cube_image_file), mask, config.color_system_file, 5,3)
+                    plot_strip_band(color_strip_stats,
+                                    strip_infos,
+                                    50,
+                                    cv2.imread(cube_image_file).shape[1],
+                                    os.path.join(config.plot_dir, f"{basename}_{k}_colorband3.png"))
                     cv2.imwrite(os.path.join(save_mask_dir, f"{k}_{category}.png"), mask_gray)
                     plot_hue(hue_hist, os.path.join(config.plot_dir, f"{basename}_{k}_hue.png"))
                     hue_sats = []

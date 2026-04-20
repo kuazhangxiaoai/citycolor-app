@@ -1,0 +1,1189 @@
+[
+    {
+        "name": "BJ-CT-01",
+        "rgb": [
+            173,
+            76,
+            70
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-CT-02",
+        "rgb": [
+            193,
+            60,
+            21
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-CT-03",
+        "rgb": [
+            173,
+            76,
+            70
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-CT-04",
+        "rgb": [
+            165,
+            87,
+            70
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-CT-05",
+        "rgb": [
+            177,
+            77,
+            68
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-CT-06",
+        "rgb": [
+            177,
+            82,
+            54
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-CT-07",
+        "rgb": [
+            206,
+            130,
+            50
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-CT-08",
+        "rgb": [
+            188,
+            110,
+            74
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-CT-09",
+        "rgb": [
+            237,
+            162,
+            43
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-CT-10",
+        "rgb": [
+            162,
+            122,
+            92
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-CT-11",
+        "rgb": [
+            183,
+            156,
+            127
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-12",
+        "rgb": [
+            148,
+            141,
+            131
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-13",
+        "rgb": [
+            148,
+            138,
+            121
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-14",
+        "rgb": [
+            142,
+            132,
+            115
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-15",
+        "rgb": [
+            152,
+            136,
+            116
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-16",
+        "rgb": [
+            165,
+            157,
+            146
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-17",
+        "rgb": [
+            181,
+            163,
+            144
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-18",
+        "rgb": [
+            168,
+            153,
+            141
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-19",
+        "rgb": [
+            159,
+            156,
+            144
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-20",
+        "rgb": [
+            135,
+            132,
+            129
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-CT-21",
+        "rgb": [
+            59,
+            157,
+            68
+        ],
+        "group": "green"
+    },
+    {
+        "name": "BJ-CT-22",
+        "rgb": [
+            102,
+            133,
+            92
+        ],
+        "group": "green"
+    },
+    {
+        "name": "BJ-CT-23",
+        "rgb": [
+            32,
+            78,
+            150
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-CT-24",
+        "rgb": [
+            29,
+            46,
+            102
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-01",
+        "rgb": [
+            146,
+            76,
+            70
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-02",
+        "rgb": [
+            184,
+            86,
+            42
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-03",
+        "rgb": [
+            174,
+            85,
+            56
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-04",
+        "rgb": [
+            179,
+            109,
+            70
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-05",
+        "rgb": [
+            194,
+            105,
+            72
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-06",
+        "rgb": [
+            184,
+            105,
+            59
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-07",
+        "rgb": [
+            231,
+            144,
+            114
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-08",
+        "rgb": [
+            204,
+            132,
+            86
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-09",
+        "rgb": [
+            184,
+            131,
+            108
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-10",
+        "rgb": [
+            207,
+            125,
+            77
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-100",
+        "rgb": [
+            120,
+            132,
+            144
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-101",
+        "rgb": [
+            118,
+            136,
+            158
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-102",
+        "rgb": [
+            128,
+            144,
+            159
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-103",
+        "rgb": [
+            108,
+            119,
+            123
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-104",
+        "rgb": [
+            89,
+            112,
+            129
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-105",
+        "rgb": [
+            102,
+            122,
+            138
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-106",
+        "rgb": [
+            105,
+            125,
+            146
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-107",
+        "rgb": [
+            95,
+            108,
+            125
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-108",
+        "rgb": [
+            74,
+            90,
+            106
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-11",
+        "rgb": [
+            221,
+            142,
+            92
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-12",
+        "rgb": [
+            188,
+            130,
+            71
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-13",
+        "rgb": [
+            234,
+            165,
+            105
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-14",
+        "rgb": [
+            225,
+            171,
+            128
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-15",
+        "rgb": [
+            222,
+            192,
+            160
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-16",
+        "rgb": [
+            210,
+            159,
+            119
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-17",
+        "rgb": [
+            238,
+            222,
+            183
+        ],
+        "group": "white"
+    },
+    {
+        "name": "BJ-XD-18",
+        "rgb": [
+            207,
+            172,
+            116
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-19",
+        "rgb": [
+            183,
+            155,
+            141
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-20",
+        "rgb": [
+            152,
+            123,
+            125
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-21",
+        "rgb": [
+            217,
+            181,
+            145
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-22",
+        "rgb": [
+            178,
+            122,
+            112
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-23",
+        "rgb": [
+            193,
+            148,
+            120
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-24",
+        "rgb": [
+            154,
+            103,
+            79
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-25",
+        "rgb": [
+            172,
+            127,
+            105
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-26",
+        "rgb": [
+            142,
+            95,
+            79
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-27",
+        "rgb": [
+            163,
+            137,
+            122
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-28",
+        "rgb": [
+            165,
+            115,
+            77
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-29",
+        "rgb": [
+            175,
+            114,
+            77
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-30",
+        "rgb": [
+            159,
+            99,
+            72
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-31",
+        "rgb": [
+            137,
+            114,
+            102
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-32",
+        "rgb": [
+            156,
+            109,
+            95
+        ],
+        "group": "red"
+    },
+    {
+        "name": "BJ-XD-33",
+        "rgb": [
+            163,
+            148,
+            138
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-34",
+        "rgb": [
+            133,
+            120,
+            112
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-35",
+        "rgb": [
+            156,
+            133,
+            110
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-36",
+        "rgb": [
+            163,
+            132,
+            98
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-37",
+        "rgb": [
+            178,
+            149,
+            119
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-38",
+        "rgb": [
+            150,
+            130,
+            94
+        ]
+    },
+    {
+        "name": "BJ-XD-39",
+        "rgb": [
+            168,
+            146,
+            118
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-40",
+        "rgb": [
+            160,
+            147,
+            130
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-41",
+        "rgb": [
+            189,
+            170,
+            142
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-42",
+        "rgb": [
+            174,
+            165,
+            156
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-43",
+        "rgb": [
+            225,
+            207,
+            159
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-44",
+        "rgb": [
+            201,
+            182,
+            157
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-45",
+        "rgb": [
+            234,
+            219,
+            181
+        ],
+        "group": "yellow"
+    },
+    {
+        "name": "BJ-XD-46",
+        "rgb": [
+            178,
+            170,
+            148
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-47",
+        "rgb": [
+            189,
+            185,
+            173
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-48",
+        "rgb": [
+            167,
+            170,
+            153
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-49",
+        "rgb": [
+            147,
+            152,
+            144
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-50",
+        "rgb": [
+            134,
+            144,
+            152
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-51",
+        "rgb": [
+            168,
+            168,
+            168
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-52",
+        "rgb": [
+            199,
+            204,
+            207
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-53",
+        "rgb": [
+            196,
+            196,
+            195
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-54",
+        "rgb": [
+            211,
+            212,
+            207
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-55",
+        "rgb": [
+            186,
+            189,
+            195
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-56",
+        "rgb": [
+            155,
+            155,
+            155
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-57",
+        "rgb": [
+            171,
+            171,
+            170
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-58",
+        "rgb": [
+            138,
+            142,
+            148
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-59",
+        "rgb": [
+            173,
+            159,
+            148
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-60",
+        "rgb": [
+            187,
+            185,
+            183
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-61",
+        "rgb": [
+            207,
+            196,
+            186
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-62",
+        "rgb": [
+            209,
+            204,
+            197
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-63",
+        "rgb": [
+            207,
+            198,
+            188
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-64",
+        "rgb": [
+            218,
+            212,
+            205
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-65",
+        "rgb": [
+            208,
+            205,
+            199
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-66",
+        "rgb": [
+            210,
+            208,
+            203
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-67",
+        "rgb": [
+            195,
+            195,
+            195
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-68",
+        "rgb": [
+            185,
+            191,
+            192
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-69",
+        "rgb": [
+            203,
+            200,
+            201
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-70",
+        "rgb": [
+            216,
+            214,
+            211
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-71",
+        "rgb": [
+            219,
+            222,
+            222
+        ],
+        "group": "white"
+    },
+    {
+        "name": "BJ-XD-72",
+        "rgb": [
+            233,
+            232,
+            230
+        ],
+        "group": "white"
+    },
+    {
+        "name": "BJ-XD-73",
+        "rgb": [
+            238,
+            235,
+            226
+        ],
+        "group": "white"
+    },
+    {
+        "name": "BJ-XD-74",
+        "rgb": [
+            234,
+            231,
+            226
+        ],
+        "group": "white"
+    },
+    {
+        "name": "BJ-XD-75",
+        "rgb": [
+            238,
+            239,
+            244
+        ],
+        "group": "white"
+    },
+    {
+        "name": "BJ-XD-76",
+        "rgb": [
+            210,
+            222,
+            222
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-77",
+        "rgb": [
+            210,
+            223,
+            234
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-78",
+        "rgb": [
+            171,
+            186,
+            197
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-79",
+        "rgb": [
+            158,
+            171,
+            183
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-80",
+        "rgb": [
+            144,
+            157,
+            168
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-81",
+        "rgb": [
+            148,
+            165,
+            173
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-82",
+        "rgb": [
+            146,
+            156,
+            165
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-83",
+        "rgb": [
+            150,
+            159,
+            171
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-84",
+        "rgb": [
+            146,
+            162,
+            170
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-85",
+        "rgb": [
+            168,
+            175,
+            179
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-86",
+        "rgb": [
+            130,
+            150,
+            163
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-87",
+        "rgb": [
+            135,
+            152,
+            159
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-88",
+        "rgb": [
+            127,
+            144,
+            142
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-89",
+        "rgb": [
+            127,
+            146,
+            144
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-90",
+        "rgb": [
+            153,
+            168,
+            168
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-91",
+        "rgb": [
+            132,
+            144,
+            160
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-92",
+        "rgb": [
+            121,
+            134,
+            146
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-93",
+        "rgb": [
+            116,
+            136,
+            141
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-94",
+        "rgb": [
+            168,
+            180,
+            184
+        ],
+        "group": "gray"
+    },
+    {
+        "name": "BJ-XD-95",
+        "rgb": [
+            97,
+            125,
+            127
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-96",
+        "rgb": [
+            93,
+            116,
+            120
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-97",
+        "rgb": [
+            107,
+            120,
+            137
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-98",
+        "rgb": [
+            82,
+            95,
+            112
+        ],
+        "group": "blue"
+    },
+    {
+        "name": "BJ-XD-99",
+        "rgb": [
+            116,
+            121,
+            133
+        ],
+        "group": "blue"
+    }
+]

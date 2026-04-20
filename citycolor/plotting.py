@@ -1,3 +1,4 @@
+import cv2
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
@@ -149,6 +150,55 @@ def plot_hue_and_sat(hue_hist, sat_hist, save_path):
     # 保存
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     plt.close(fig)
+
+def plot_color_band(stats,h=1000, w=50, direct='vertical', save_path=None):
+    colors, ratios = [], []
+    for stat in stats:
+        colors.append(stat['rgb'])
+        ratios.append(stat['ratio'])
+
+    color_band = np.zeros((h,w, 3), dtype=np.uint8)
+    start_y,start_x = 0,0
+    for color, ratio in zip(colors, ratios):
+        if direct == 'vertical':
+            end_y = int(start_y + ratio * h)
+            cv2.rectangle(color_band,
+                          pt1=(0, start_y),
+                          pt2=(w-1, end_y),
+                          color=(color[2], color[1], color[0]),
+                          thickness=-1)
+            start_y = end_y + 1
+        else:
+            end_x = int(start_x + ratio * w)
+            cv2.rectangle(color_band,
+                          pt1=(start_x, 0),
+                          pt2=(end_x, h-1),
+                          color=(color[2], color[1], color[0]),
+                          thickness=-1)
+            start_x = end_x + 1
+    if save_path is not None:
+        cv2.imwrite(save_path, color_band)
+    else:
+        return color_band
+
+def plot_strip_band(stats, strip_infos, h, w, save_path):
+    color_strips = []
+    strip = np.zeros((h,w,3), dtype=np.uint8)
+    for stat, strip_info in zip(stats, strip_infos):
+        pt1, pt2 = strip_info['p1'], strip_info['p2']
+        x1, y1= pt1
+        x2, y2 = pt2
+        hs, ws = h, x2 - x1
+        if stat is None or x2 >= w:
+            continue
+        strip_color = plot_color_band(stat, hs, ws, 'horizontal', None)
+        strip[:, x1:x2,:] = strip_color
+        color_strips.append(strip)
+    if save_path is not None :
+        cv2.imwrite(save_path, strip)
+    else:
+        return strip
+
 
 
 

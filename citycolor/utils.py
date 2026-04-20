@@ -1,7 +1,9 @@
+import json
 import os
 
 import cv2
 import yaml
+from langsmith import expect
 
 from citycolor.config import Config
 import numpy as np
@@ -133,11 +135,125 @@ def pano2cube(image: np.ndarray, imgsz=512):
         cube[f] = fimg
     return cube
 
-def get_expect(hist:np.ndarray):
+def get_expect(hist:np.ndarray, dvideby=True):
     xs = np.arange(hist.shape[0])
     ys = hist.astype(np.float32) / hist.sum()
-    expect = (xs * ys).sum() / hist.shape[0]
+    if dvideby:
+        expect = (xs * ys).sum() / hist.shape[0]
+    else:
+        expect = (xs * ys).sum()
     return expect
+
+def get_image_block(image, mask, blocksize=9):
+    h, w, _ = image.shape
+    grid_y, grid_x = np.meshgrid(np.arange(start=0, stop=h, step=blocksize), np.arange(start=0, stop=w, step=blocksize), indexing='ij')
+    grid = np.stack([grid_y, grid_x], axis=-1).reshape(-1,2)
+    blocks = []
+    for pt in grid:
+        y, x= pt[0], pt[1]
+        center = (x + blocksize // 2, y + blocksize // 2)
+        if center[0] > w or center[1]> h:
+            continue
+        if mask[center[1], center[0]]:
+            blocks.append(image[y: y + blocksize, x: x + blocksize,:])
+    return blocks
+
+def get_hist(image):
+    hist = np.array([0] * 256)
+    for i in range(256):
+        mask = image[image==i]
+        hist[i] = mask.sum()
+    return hist
+
+def get_strip(image: np.ndarray, strip_num=5):
+    h, w = image.shape[:2]
+    strips = []
+    step = w // strip_num
+    strip_infos = []
+    for x in range(0, w, step):
+        strip = image[:, x: x+step, :]
+        strip_info = {
+            "p1": [x, 0],
+            "p2": [x+step, h]
+        }
+        strips.append(strip)
+        strip_infos.append(strip_info)
+    return strips, strip_infos
+
+def rgb_normalize(r, g, b):
+    s = float(r) + float(g) + float(b)
+    return r / s, g / s, b / s
+
+def get_vertical_color_card(image: np.ndarray, mask: np.ndarray, cardfile: str, stripnum: int, cellsize: int):
+    strips,_strip_infos = get_strip(image, stripnum)
+    strips_m,_ = get_strip(mask[:,:, None], stripnum)
+    stats = []
+    for img, msk in zip(strips, strips_m):
+        stat = get_color_cards(img, msk[:,:, 0], cardfile, cellsize)
+        stats.append(stat)
+    return stats, _strip_infos
+
+
+def get_color_cards(image: np.ndarray, mask: np.ndarray, cardfile: str, blocksize: int, topk=-1):
+    with open(cardfile, 'r', encoding='utf-8') as f:
+        cards = json.load(f)
+    blocks = get_image_block(image, mask, blocksize)
+    flag = mask.astype(np.int32)
+    if flag.sum() == 0:
+        return None
+    color = [c["rgb"] for c in cards]
+    colors0 = np.array([rgb_normalize(*c["rgb"]) for c in cards])
+    names = [c["name"] for c in cards]
+    stats = [{"name": name, "color": color, "rgb": cl ,"count": 0} for name, color, cl in zip(names, colors0.tolist(), color)]
+    for blk in blocks:
+        hist_b, hist_g, hist_r = get_hist(blk[:,:,0]),get_hist(blk[:,:,1]),get_hist(blk[:,:,2])
+        #value_max = blk.max(axis=-1).mean()
+        #if value_max < 25:
+        #    continue
+        eb, eg, er = hist_b.argmax(), hist_g.argmax(), hist_r.argmax()
+        eh, es, ev = rgb_normalize(er, eg, eb)
+        colors1 = np.repeat(np.array([eh, es, ev])[None,:], colors0.shape[0], axis=0)
+        diffs = np.abs(colors1 - colors0).sum(axis=-1)
+        min_index = diffs.argmin()
+        #name = names[min_index]
+        stats[min_index]["count"] += (blocksize * blocksize)
+
+    total = 0
+    new_stats = []
+    for i, stat in enumerate(stats):
+        if stats[i]["count"] > 0.05 * len(blocks):
+            total = total + stats[i]["count"]
+
+    for i, stat in enumerate(stats):
+        if stat["count"] > 0.05 * len(blocks):
+            stat["ratio"] = stat["count"] * 1.0 / total
+            new_stats.append(stat)
+        #stats[i]["ratio"] = stats[i]["count"] * 1.0 / total
+    if topk > 0:
+        ratio_list = [0] * len(new_stats)
+        topk = min(topk, len(new_stats))
+        for i in range(len(new_stats)):
+            ratio_list[i] = new_stats[i]['ratio']
+        idx = np.argpartition(np.array(ratio_list), -topk)[-topk:]
+        topk_values = np.array(ratio_list)[idx]
+        new_stats_topk = []
+        for k in idx:
+            new_stat_topk = new_stats[k]
+            new_stat_topk['ratio'] = new_stat_topk['ratio'] / topk_values.sum()
+            new_stats_topk.append(new_stats[k])
+        return new_stats_topk
+    else:
+        return new_stats
+
+
+
+
+
+
+
+
+
+
 
 
 

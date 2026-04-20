@@ -8,8 +8,8 @@ class Config:
         self.save_mask_dir = os.path.join(project_dir, "assets/masks")
         self.categories_file = os.path.join(project_dir, "ultralytics/cfg/datasets/CityscapesYOLO.yaml")
         self.plot_dir = os.path.join(project_dir, "assets/plot")
-
-        self.attention_direction = ['pz', 'nz']
+        self.color_system_file = os.path.join(project_dir, "assets/bj-color-system.json")
+        self.attention_direction = ['px', 'nx']
         self.attention_categories = ['building'] #需要查询ultralytics的cityscapesYOLO配置文件的对照表
 
         self.color_degree_num = 12 #色度
